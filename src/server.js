@@ -12,4 +12,6 @@ server.get("/", (req, res) => {
   res.status(200).json(sprint);
 });
 
+server.use("/api", require("./routes"));
+
 module.exports = server;
