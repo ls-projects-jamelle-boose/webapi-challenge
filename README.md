@@ -26,13 +26,22 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+  - I learned about the `use` method and how to create custom middleware.
+
 - [ ] Describe Middleware?
+
+  - Middleware acts as a bridge between applications, it can be built in, created by the user, or a 3rd party.
 
 - [ ] Describe a Resource?
 
+  - A resource is an object that defines certain actions such as `send`, `update`, `delete`, and can be used to map pathnames, nest other resources, etc. It is very powerful.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+  - It can return a status code or a message. The more descriptive the better.
+
 - [ ] How can we partition our application into sub-applications?
+  - By importing/exporting resources.
 
 ## Project Setup
 
