@@ -34,6 +34,7 @@ module.exports = {
           message: `This action does not exist.`
         });
       } else {
+        console.log(action.id);
         res.status(200).json({
           success: true,
           action
@@ -79,7 +80,7 @@ module.exports = {
           });
         }
       }
-    } catch (error) {
+    } catch (err) {
       next({
         status: 500,
         message: `Action could not be saved.`

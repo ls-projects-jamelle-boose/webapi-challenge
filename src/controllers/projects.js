@@ -82,11 +82,11 @@ module.exports = {
     const { name, description } = data;
 
     try {
-      if (length === 0) next({ code: 400, message: "Missing project data." });
+      if (length === 0) next({ status: 400, message: "Missing project data." });
 
       if ((length > 0 && !name) || !description)
         next({
-          code: 400,
+          status: 400,
           message: "Missing required name or description field."
         });
 
@@ -94,7 +94,7 @@ module.exports = {
 
       if (newProject) res.status(201).json({ newProject, success: true });
     } catch (err) {
-      next({ code: 500, message: "Project could not be saved." });
+      next({ status: 500, message: "Project could not be saved." });
     }
   },
   rm: async (req, res, next) => {

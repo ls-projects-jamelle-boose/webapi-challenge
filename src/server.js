@@ -1,5 +1,5 @@
-const express = require("express");
 const errorHandler = require("./middleware/errorHandler");
+const express = require("express");
 
 const server = express();
 server.use(express.json());

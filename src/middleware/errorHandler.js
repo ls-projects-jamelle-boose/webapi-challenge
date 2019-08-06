@@ -1,6 +1,6 @@
 module.exports = (err, req, res, next) => {
-  if (err.code) {
-    res.status(err.code).json({
+  if (err.status) {
+    res.status(err.status).json({
       ...err,
       success: false
     });
